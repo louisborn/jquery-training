@@ -1,59 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="main.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <script>
-        $(document).ready(function () {
-            /* Hier der jQuery-Code */
-            var toAppend = '';
-            var selected = [];
-
-            $('input:checkbox').change(function () {
-                var val_checkbox = $(this).val();
-                var prop_checkbox = $(this).prop('checked');
-
-                $('#app-text').remove();
-
-                if (prop_checkbox) { selected.push(val_checkbox); }
-                else {
-                    selected = selected.filter(e => e !== val_checkbox);
-                }
-
-                console.log(selected);
-
-                $('section').append('<p id="app-text">' + selected + '</p>')
-            });
-        });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-
 <body>
-
-    <section>
-        <div class="a-checkbox">
-            <input type="checkbox" name="filter__1" class="checkbox" id="id-filter__1" value="option1">
-            <label for="id-filter__1">Filter Option 1</label>
-        </div>
     
-        <div class="a-checkbox">
-            <input type="checkbox" name="filter__2" class="checkbox" id="id-filter__2" value="option2">
-            <label for="id-filter__2">Filter Option 2</label>
-        </div>
-    
-        <div class="a-checkbox">
-            <input type="checkbox" name="filter__3" class="checkbox" id="id-filter__3" value="option3">
-            <label for="id-filter__3">Filter Option 3</label>
-        </div>    
-    </section>
 </body>
-
 </html>
