@@ -8,6 +8,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="side-navigation.css">
+
+    <script src="https://kit.fontawesome.com/419a0ffd8f.js" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="main.js"></script>
@@ -32,27 +35,51 @@
 
                 $('section').append('<p id="app-text">' + selected + '</p>')
             });
+
+            $('button.m-side-navigation__header__trigger.-open').click(function () {
+                $('section.m-side-navigation').removeClass('-close').addClass('-open');
+            });
+
+            
+
+            $('button.m-side-navigation__header__trigger.-close').click(function () {
+                console.log('close button pressed');
+                $('section.m-side-navigation').removeClass('-open').addClass('-close');
+            });
         });
     </script>
 </head>
 
 <body>
 
+    <section class="m-side-navigation -close">
+        <div class="m-side-navigation__header">
+            <!--html is inserted here by jQuery logic-->
+            <div class="m-side-navigation__header__label">App name</div>
+            <button type="button" class="a-button__icon m-side-navigation__header__trigger -open">
+                <i class="fas fa-bars a-icon"></i>
+            </button>
+            <button type="button" class="a-button__icon m-side-navigation__header__trigger -close">
+                <i class="fas fa-times a-icon"></i>
+            </button>
+        </div>
+    </section>
+
     <section>
         <div class="a-checkbox">
             <input type="checkbox" name="filter__1" class="checkbox" id="id-filter__1" value="option1">
             <label for="id-filter__1">Filter Option 1</label>
         </div>
-    
+
         <div class="a-checkbox">
             <input type="checkbox" name="filter__2" class="checkbox" id="id-filter__2" value="option2">
             <label for="id-filter__2">Filter Option 2</label>
         </div>
-    
+
         <div class="a-checkbox">
             <input type="checkbox" name="filter__3" class="checkbox" id="id-filter__3" value="option3">
             <label for="id-filter__3">Filter Option 3</label>
-        </div>    
+        </div>
     </section>
 </body>
 
