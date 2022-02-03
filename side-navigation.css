@@ -1,6 +1,8 @@
 body {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .a-icon {
@@ -29,7 +31,7 @@ body {
 
 .m-side-navigation.-close .m-side-navigation__header__trigger.-open {
     position: relative;
-    left: -3rem;
+    left: -3.5rem;
 }
 
 .m-side-navigation.-open .m-side-navigation__header__trigger.-open {
@@ -63,5 +65,38 @@ body {
 }
 
 .m-side-navigation__header__label {
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
+}
+
+/*********/
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.m-side-navigation__menuItems {
+    margin: 1.5rem 0;
+}
+
+.m-side-navigation__menuItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+.m-side-navigation__menuItem:hover {
+    background-color: #595e62;
+}
+
+.m-side-navigation.-close .m-side-navigation__menuItem span {
+    display: none;
 }
