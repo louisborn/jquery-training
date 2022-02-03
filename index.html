@@ -20,6 +20,8 @@
             var toAppend = '';
             var selected = [];
 
+            var activeMenuItem = '';
+
             $('input:checkbox').change(function () {
                 var val_checkbox = $(this).val();
                 var prop_checkbox = $(this).prop('checked');
@@ -46,6 +48,11 @@
                 console.log('close button pressed');
                 $('section.m-side-navigation').removeClass('-open').addClass('-close');
             });
+
+            $('a.menuItem__action').click(function () {
+                $('li').removeClass('-selected');
+                $(this).parent().addClass('-selected');
+            });
         });
     </script>
 </head>
@@ -64,20 +71,20 @@
             </button>
         </div>
         <ul class="m-side-navigation__menuItems">
-            <li class="m-side-navigation__menuItem -selected">
-                <a href="">
+            <li class="m-side-navigation__menuItem">
+                <a role="button" class="menuItem__action">
                     <i class="far fa-comment-dots a-icon"></i>
                     <span>Chat</span>
                 </a>
             </li>
             <li class="m-side-navigation__menuItem">
-                <a href="">
+                <a role="button" class="menuItem__action">
                     <i class="far fa-clock a-icon"></i>
                     <span>Time slot</span>
                 </a>
             </li>
             <li class="m-side-navigation__menuItem">
-                <a href="">
+                <a role="button" class="menuItem__action">
                     <i class="far fa-user-circle a-icon"></i>
                     <span>User information</span>
                 </a>

@@ -96,6 +96,7 @@ a {
     color: #fff;
     font-size: 1rem;
     font-family: sans-serif;
+    cursor: pointer;
 }
 
 .m-side-navigation__menuItems {
