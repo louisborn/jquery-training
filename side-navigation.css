@@ -120,10 +120,6 @@ a {
     align-items: center;
 }
 
-li > span {
-
-}
-
 .m-side-navigation__menuItem:hover {
     background-color: #595e62;
 }
