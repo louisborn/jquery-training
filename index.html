@@ -59,39 +59,46 @@
 
 <body>
 
-    <section class="m-side-navigation -close">
-        <div class="m-side-navigation__header">
-            <!--html is inserted here by jQuery logic-->
-            <div class="m-side-navigation__header__label">App name</div>
-            <button type="button" class="a-button__icon m-side-navigation__header__trigger -open">
-                <i class="fas fa-bars a-icon"></i>
-            </button>
-            <button type="button" class="a-button__icon m-side-navigation__header__trigger -close">
-                <i class="fas fa-times a-icon"></i>
-            </button>
-        </div>
-        <ul class="m-side-navigation__menuItems">
-            <li class="m-side-navigation__menuItem">
-                <a role="button" class="menuItem__action">
-                    <i class="far fa-comment-dots a-icon"></i>
-                    <span>Chat</span>
-                </a>
-            </li>
-            <li class="m-side-navigation__menuItem">
-                <a role="button" class="menuItem__action">
-                    <i class="far fa-clock a-icon"></i>
-                    <span>Time slot</span>
-                </a>
-            </li>
-            <li class="m-side-navigation__menuItem">
-                <a role="button" class="menuItem__action">
-                    <i class="far fa-user-circle a-icon"></i>
-                    <span>User information</span>
-                </a>
-            </li>
-        </ul>
-    </section>
+    <header class="-grid__header">
+        <p>This is the header</p>
+    </header>
 
+    <div class="m-side-navigation__body">
+        <section class="m-side-navigation -close -grid__side-nav">
+            <div class="m-side-navigation__header">
+                <!--html is inserted here by jQuery logic-->
+                <div class="m-side-navigation__header__label">App name</div>
+                <button type="button" class="a-button__icon m-side-navigation__header__trigger -open">
+                    <i class="fas fa-bars a-icon"></i>
+                </button>
+                <button type="button" class="a-button__icon m-side-navigation__header__trigger -close">
+                    <i class="fas fa-times a-icon"></i>
+                </button>
+            </div>
+            <ul class="m-side-navigation__menuItems">
+                <li class="m-side-navigation__menuItem">
+                    <a role="button" class="menuItem__action">
+                        <i class="far fa-comment-dots a-icon"></i>
+                        <span>Chat</span>
+                    </a>
+                </li>
+                <li class="m-side-navigation__menuItem">
+                    <a role="button" class="menuItem__action">
+                        <i class="far fa-clock a-icon"></i>
+                        <span>Time slot</span>
+                    </a>
+                </li>
+                <li class="m-side-navigation__menuItem">
+                    <a role="button" class="menuItem__action">
+                        <i class="far fa-user-circle a-icon"></i>
+                        <span>User information</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    
+    <!--
     <section>
         <div class="a-checkbox">
             <input type="checkbox" name="filter__1" class="checkbox" id="id-filter__1" value="option1">
@@ -108,6 +115,7 @@
             <label for="id-filter__3">Filter Option 3</label>
         </div>
     </section>
+    -->
 </body>
 
 </html>
