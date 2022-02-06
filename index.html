@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="checkbox.css">
     <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="chip.css">
 
     <script src="https://kit.fontawesome.com/419a0ffd8f.js" crossorigin="anonymous"></script>
 
@@ -65,6 +67,7 @@
 
     <header class="o-header -grid__header">
         <div class="o-header__title">Page name lorem ipsum</div>
+        <!--
         <section>
             <div class="a-checkbox">
                 <input type="checkbox" name="filter__1" class="checkbox" id="id-filter__1" value="option1">
@@ -81,6 +84,7 @@
                 <label for="id-filter__3">Filter Option 3</label>
             </div>
         </section>
+        -->
     </header>
 
     <div class="m-side-navigation__body">
@@ -119,12 +123,43 @@
     </div>
     
     <section class="-grid__content twelve-col">
-        <button class="a-button -primary">
-            <div class="a-button__label">Button 1</div>
-        </button>
-        <button class="a-button -secondary">
-            <div class="a-button__label">Button 1</div>
-        </button>
+        <section class="content-section__main">
+            <table class="m-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Benachrichtigungen</th>
+                        <th>Aktion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Louis Born</td>
+                        <td>louisborn12@gmail.com</td>
+                        <td><ul style="display:flex; flex-wrap:wrap;">
+                            <li><div class="a-chip">Test</div></li>
+                            <li><div class="a-chip">Ein weiterer Test</div></li>
+                            <li><div class="a-chip">Ein noch etwas längerer Test</div></li>
+                        </ul></td>
+                        <td>Eine aktion</td>
+                    </tr>
+                    <tr>
+                        <td>Louis Born</td>
+                        <td>louisborn12@gmail.com</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="content-section__action">
+            <button class="a-button -primary">
+                <div class="a-button__label">Email hinzufügen</div>
+            </button>
+        </section>
+        
     </section>
 
     <footer class="o-footer -grid__footer">

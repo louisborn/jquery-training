@@ -10,6 +10,7 @@ td, th {
 }
 
 .m-table thead {
+    height: 3rem;
     border-bottom: 2px solid #333333;
     position: sticky;
     /*required for stickiness*/

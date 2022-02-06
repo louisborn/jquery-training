@@ -13,6 +13,7 @@
     border: none;
     cursor: pointer;
     height: 3rem;
+    width: auto;
 }
 
 .a-button__label {
