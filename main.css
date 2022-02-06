@@ -1,3 +1,13 @@
+:root {
+    --green-50: #24AD4E;
+    --green-40: #69FF96;
+    --green-30: #4DFA80;
+
+    --red-50: #AD1413;
+    --red-40: #FA3737;
+    --red-30: #FA4F4D;
+}
+
 body {
     display: grid;
     grid-template-columns: minmax(3rem, auto) 1fr;

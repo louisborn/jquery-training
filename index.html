@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="side-navigation.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="checkbox.css">
 
     <script src="https://kit.fontawesome.com/419a0ffd8f.js" crossorigin="anonymous"></script>
 
@@ -35,7 +37,7 @@
 
                 console.log(selected);
 
-                $('section').append('<p id="app-text">' + selected + '</p>')
+                //$('section').append('<p id="app-text">' + selected + '</p>')
             });
 
             $('button.m-side-navigation__header__trigger.-open').click(function () {
@@ -59,8 +61,24 @@
 
 <body>
 
-    <header class="-grid__header">
-        <p>This is the header</p>
+    <header class="o-header -grid__header">
+        <div class="o-header__title">Page name lorem ipsum</div>
+        <section>
+            <div class="a-checkbox">
+                <input type="checkbox" name="filter__1" class="checkbox" id="id-filter__1" value="option1">
+                <label for="id-filter__1">Filter Option 1</label>
+            </div>
+    
+            <div class="a-checkbox">
+                <input type="checkbox" name="filter__2" class="checkbox" id="id-filter__2" value="option2">
+                <label for="id-filter__2">Filter Option 2</label>
+            </div>
+    
+            <div class="a-checkbox">
+                <input type="checkbox" name="filter__3" class="checkbox" id="id-filter__3" value="option3">
+                <label for="id-filter__3">Filter Option 3</label>
+            </div>
+        </section>
     </header>
 
     <div class="m-side-navigation__body">
