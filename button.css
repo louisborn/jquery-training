@@ -1,8 +1,8 @@
 /* Buttons */
 :root {
-    --primary-button-color: #19686A;
-    --primary-button-color__hover: #A8EFF0;
-    --primary-button-color__active: #002021;
+    --primary-button-color: #44adf0;
+    --primary-button-color__hover: #26a1ed;
+    --primary-button-color__active: #0b5b8e;
 }
 
 
@@ -12,6 +12,7 @@
     padding: 0;
     border: none;
     cursor: pointer;
+    height: 3rem;
 }
 
 .a-button__label {
@@ -19,34 +20,34 @@
     padding: 1rem 1rem;
 }
 
-.a-button--primary {
+.a-button.-primary {
     background-color: var(--primary-button-color);
     color: white;
 }
 
-.a-button--primary:hover {
+.a-button.-primary:hover {
     background-color: var(--primary-button-color__hover);
 }
 
-.a-button--primary:active {
+.a-button.-primary:active {
     background-color: var(--primary-button-color__active);
 }
 
 
 /* Button--Secondary */
-.a-button--secondary {
+.a-button.-secondary {
     background-color: transparent;
     color: var(--primary-button-color);
     border: var(--primary-button-color) solid 2px;
 }
 
-.a-button--secondary:hover {
-    background-color: var(--primary-button-color__hover);
+.a-button.-secondary:hover {
+    background-color: rgba(38, 161, 237, 0.1);
 }
 
-.a-button--secondary:active {
-    background-color: var(--primary-button-color__active);
-    color: white;
+.a-button.-secondary:active {
+    background-color: rgba(38, 161, 237, 0.5);
+    color: var(--primary-button-color__active);
     border: var(--primary-button-color__active) solid 2px;
 }
 

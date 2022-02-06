@@ -1,0 +1,10 @@
+.o-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.o-footer p {
+    font-size: 0.75rem;
+    margin-left: 2rem;
+}
