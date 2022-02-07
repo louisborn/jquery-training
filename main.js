@@ -13,11 +13,13 @@ $(document).ready(function () {
     sortSampleDataAlphabetically(data);
 
     $('table.m-table thead tr > th:nth-child(1)').click(function () {
-        if($(this).attr('class') === '-sorted__AtoZ') {
-            sortSampleDataAlphabeticallyReverse(data);
-        }
-        else {
-            sortSampleDataAlphabetically(data);
+        switch ($(this).attr('class')) {
+            case '-sorted__AtoZ':
+                sortSampleDataAlphabeticallyReverse(data);
+                break;
+            case '-sorted__ZtoA':
+                sortSampleDataAlphabetically(data);
+                break;
         }
     });
     
