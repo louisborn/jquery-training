@@ -4,4 +4,10 @@
     width: fit-content;
     border-radius: 5rem;
     background-color: #eaeaea;
+    margin: 0 0.125rem;
+}
+
+ul.list-for__a-chip {
+    display: flex;
+    flex-wrap: wrap;
 }
