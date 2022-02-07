@@ -67,7 +67,7 @@ body {
 }
 
 .content-section__main {
-    overflow-y: scroll;
+    overflow-y: auto;
     grid-column: 1 / 11;
 }
 

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="table.css">
     <link rel="stylesheet" href="chip.css">
 
-    <script src="https://kit.fontawesome.com/419a0ffd8f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="main.js"></script>
@@ -85,7 +85,9 @@
                             <ul class="list-for__a-chip">
                                 ${tags_list}
                             </ul >
-                        </td >    
+                        </td>
+                        <td><i class="fas fa-pen a-button -withIcon"></td>
+                        <td><i class="far fa-trash-alt a-button -withIcon"></i></td>
                     </tr >`;            
                 });
                 return toAppend;
@@ -161,7 +163,8 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Benachrichtigungen</th>
-                        <th>Aktion</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
