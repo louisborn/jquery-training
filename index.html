@@ -24,7 +24,14 @@
         $(document).ready(function () {
             /* Hier der jQuery-Code */
             /*Dummy data for email list*/
-            var sample_data = '[{"name": "Louis Born", "email": "louis.born@gmail.com", "tag": ["Test", "Noch ein Test"]}, {"name": "Max Mustermann", "email": "max.mustermann@gmail.com", "tag": ["Test"]}, {"name": "Michael Meier", "email": "michael.meier@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test"]}]';
+            var sample_data = `[
+                {"name": "Louis Born", "email": "louis.born@gmail.com", "tag": ["Test", "Noch ein Test"]}, 
+                {"name": "Max Mustermann", "email": "max.mustermann@gmail.com", "tag": ["Test"]}, 
+                {"name": "Michael Meier", "email": "michael.meier@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test"]},
+                {"name": "Fritz Müller", "email": "fritz.mueller@gmail.com", "tag": ["Test", "Noch ein Test"]},
+                {"name": "Marco Mendes", "email": "marco.mendez@gmail.com", "tag": ["Test", "Noch ein Test"]},
+                {"name": "Maria Navez", "email": "maria.navez@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test", "Sogar ganz viele Tests"]}
+            ]`;
             var toAppend = '';
             var selected = [];
 
@@ -171,6 +178,7 @@
                     <!--Data loaded by jquery-->
                 </tbody>
             </table>
+            
         </section>
 
         <section class="content-section__action">

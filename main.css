@@ -68,7 +68,7 @@ body {
 
 .content-section__main {
     overflow-y: auto;
-    grid-column: 1 / 11;
+    grid-column: 1 / 13;
 }
 
 .content-section__action {
@@ -76,6 +76,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-top: 1rem;
 }
 
 .-grid__footer {
