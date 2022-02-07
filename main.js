@@ -8,15 +8,26 @@ $(document).ready(function () {
         {"name": "Maria Navez", "email": "maria.navez@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test", "Sogar ganz viele Tests"]}
     ]`;
 
+    var data = JSON.parse(sample_data);
 
-    loadAndParseSampleData(sample_data);
+    sortSampleDataAlphabetically(data);
+
+    $('table.m-table thead tr > th:nth-child(1)').click(function () {
+        if($(this).attr('class') === '-sorted__AtoZ') {
+            sortSampleDataAlphabeticallyReverse(data);
+        }
+        else {
+            sortSampleDataAlphabetically(data);
+        }
+    });
     
 });
 
-function loadAndParseSampleData(sample) {
-    var result = JSON.parse(sample);
+function loadSampleData(data, sortType) {
             
-    $('table.m-table tbody').append(parseObj(result));
+    $('table.m-table tbody').empty().append(parseObj(data));
+
+    $('table.m-table thead tr > th:nth-child(1)').removeClass().addClass(sortType);
 
     function parseObj(obj) {
         var toAppend = '';
@@ -43,4 +54,26 @@ function loadAndParseSampleData(sample) {
         });
         return toAppend;
     }
+}
+
+function sortSampleDataAlphabetically(data) {
+    data.sort(function (a,b) {
+        var lowerA = a.name.toLowerCase(), lowerB = b.name.toLowerCase();
+        if(lowerA<lowerB) return -1;
+        if(lowerA>lowerB) return 1;
+        return 0;
+    });
+
+    loadSampleData(data, '-sorted__AtoZ');
+}
+
+function sortSampleDataAlphabeticallyReverse(data) {
+    data.sort(function (a,b) {
+        var lowerA = a.name.toLowerCase(), lowerB = b.name.toLowerCase();
+        if(lowerA<lowerB) return 1;
+        if(lowerA>lowerB) return -1;
+        return 0;
+    });
+
+    loadSampleData(data, '-sorted__ZtoA');
 }
