@@ -24,7 +24,7 @@
         $(document).ready(function () {
             /* Hier der jQuery-Code */
             /*Dummy data for email list*/
-            var data = '[{"name": "Louis Born", "email": "louisborn12@gmail.com", "tag": "Test"}]';
+            var sample_data = '[{"name": "Louis Born", "email": "louis.born@gmail.com", "tag": ["Test", "Noch ein Test"]}, {"name": "Max Mustermann", "email": "max.mustermann@gmail.com", "tag": ["Test"]}, {"name": "Michael Meier", "email": "michael.meier@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test"]}]';
             var toAppend = '';
             var selected = [];
 
@@ -50,7 +50,7 @@
                 $('section.m-side-navigation').removeClass('-close').addClass('-open');
             });
 
-            
+
 
             $('button.m-side-navigation__header__trigger.-close').click(function () {
                 console.log('close button pressed');
@@ -63,25 +63,30 @@
             });
 
             /*Parse json to js*/
-            var result = JSON.parse(data);
-            console.log(result);
-            console.log(result[0].name);
+            var result = JSON.parse(sample_data);
+            
             $('table.m-table tbody').append(parseObj(result));
 
             function parseObj(obj) {
                 var toAppend = '';
-                obj.forEach(function(index) {
-                    toAppend = `
+
+                obj.forEach(function (index) {
+                    var tags_list = '';
+
+                    index.tag.forEach(function (i) {
+                        tags_list += `<li><div class="a-chip">${i}</div></li>`;
+                    });
+
+                    toAppend += `
                     <tr>
                         <td>${index.name}</td>
                         <td>${index.email}</td>
                         <td>
                             <ul class="list-for__a-chip">
-                                <li><div class="a-chip">${index.tag}</div></li>
-                            </ul>
-                        </td>    
-                    </tr>
-                    `;
+                                ${tags_list}
+                            </ul >
+                        </td >    
+                    </tr >`;            
                 });
                 return toAppend;
             }
@@ -147,7 +152,7 @@
             </ul>
         </section>
     </div>
-    
+
     <section class="-grid__content twelve-col">
         <section class="content-section__main">
             <table class="m-table">
@@ -164,13 +169,13 @@
                 </tbody>
             </table>
         </section>
-        
+
         <section class="content-section__action">
             <button class="a-button -primary">
                 <div class="a-button__label">Email hinzufügen</div>
             </button>
         </section>
-        
+
     </section>
 
     <footer class="o-footer -grid__footer">
