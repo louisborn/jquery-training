@@ -23,6 +23,8 @@
     <script>
         $(document).ready(function () {
             /* Hier der jQuery-Code */
+            /*Dummy data for email list*/
+            var data = '[{"name": "Louis Born", "email": "louisborn12@gmail.com", "tag": "Test"}]';
             var toAppend = '';
             var selected = [];
 
@@ -59,6 +61,30 @@
                 $('li').removeClass('-selected');
                 $(this).parent().addClass('-selected');
             });
+
+            /*Parse json to js*/
+            var result = JSON.parse(data);
+            console.log(result);
+            console.log(result[0].name);
+            $('table.m-table tbody').append(parseObj(result));
+
+            function parseObj(obj) {
+                var toAppend = '';
+                obj.forEach(function(index) {
+                    toAppend = `
+                    <tr>
+                        <td>${index.name}</td>
+                        <td>${index.email}</td>
+                        <td>
+                            <ul class="list-for__a-chip">
+                                <li><div class="a-chip">${index.tag}</div></li>
+                            </ul>
+                        </td>    
+                    </tr>
+                    `;
+                });
+                return toAppend;
+            }
         });
     </script>
 </head>
@@ -134,22 +160,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Louis Born</td>
-                        <td>louisborn12@gmail.com</td>
-                        <td><ul style="display:flex; flex-wrap:wrap;">
-                            <li><div class="a-chip">Test</div></li>
-                            <li><div class="a-chip">Ein weiterer Test</div></li>
-                            <li><div class="a-chip">Ein noch etwas längerer Test</div></li>
-                        </ul></td>
-                        <td>Eine aktion</td>
-                    </tr>
-                    <tr>
-                        <td>Louis Born</td>
-                        <td>louisborn12@gmail.com</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <!--Data loaded by jquery-->
                 </tbody>
             </table>
         </section>
