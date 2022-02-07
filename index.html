@@ -8,13 +8,13 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="side-navigation.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="checkbox.css">
-    <link rel="stylesheet" href="button.css">
-    <link rel="stylesheet" href="table.css">
-    <link rel="stylesheet" href="chip.css">
+    <link rel="stylesheet" href="acss-components/side-navigation.css">
+    <link rel="stylesheet" href="acss-components/header.css">
+    <link rel="stylesheet" href="acss-components/footer.css">
+    <link rel="stylesheet" href="acss-components/checkbox.css">
+    <link rel="stylesheet" href="acss-components/button.css">
+    <link rel="stylesheet" href="acss-components/table.css">
+    <link rel="stylesheet" href="acss-components/chip.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
@@ -23,15 +23,6 @@
     <script>
         $(document).ready(function () {
             /* Hier der jQuery-Code */
-            /*Dummy data for email list*/
-            var sample_data = `[
-                {"name": "Louis Born", "email": "louis.born@gmail.com", "tag": ["Test", "Noch ein Test"]}, 
-                {"name": "Max Mustermann", "email": "max.mustermann@gmail.com", "tag": ["Test"]}, 
-                {"name": "Michael Meier", "email": "michael.meier@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test"]},
-                {"name": "Fritz Müller", "email": "fritz.mueller@gmail.com", "tag": ["Test", "Noch ein Test"]},
-                {"name": "Marco Mendes", "email": "marco.mendez@gmail.com", "tag": ["Test", "Noch ein Test"]},
-                {"name": "Maria Navez", "email": "maria.navez@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test", "Sogar ganz viele Tests"]}
-            ]`;
             var toAppend = '';
             var selected = [];
 
@@ -68,37 +59,6 @@
                 $('li').removeClass('-selected');
                 $(this).parent().addClass('-selected');
             });
-
-            /*Parse json to js*/
-            var result = JSON.parse(sample_data);
-            
-            $('table.m-table tbody').append(parseObj(result));
-
-            function parseObj(obj) {
-                var toAppend = '';
-
-                obj.forEach(function (index) {
-                    var tags_list = '';
-
-                    index.tag.forEach(function (i) {
-                        tags_list += `<li><div class="a-chip">${i}</div></li>`;
-                    });
-
-                    toAppend += `
-                    <tr>
-                        <td>${index.name}</td>
-                        <td>${index.email}</td>
-                        <td>
-                            <ul class="list-for__a-chip">
-                                ${tags_list}
-                            </ul >
-                        </td>
-                        <td><i class="fas fa-pen a-button -withIcon"></td>
-                        <td><i class="far fa-trash-alt a-button -withIcon"></i></td>
-                    </tr >`;            
-                });
-                return toAppend;
-            }
         });
     </script>
 </head>
@@ -107,24 +67,6 @@
 
     <header class="o-header -grid__header">
         <div class="o-header__title">Page name lorem ipsum</div>
-        <!--
-        <section>
-            <div class="a-checkbox">
-                <input type="checkbox" name="filter__1" class="checkbox" id="id-filter__1" value="option1">
-                <label for="id-filter__1">Filter Option 1</label>
-            </div>
-    
-            <div class="a-checkbox">
-                <input type="checkbox" name="filter__2" class="checkbox" id="id-filter__2" value="option2">
-                <label for="id-filter__2">Filter Option 2</label>
-            </div>
-    
-            <div class="a-checkbox">
-                <input type="checkbox" name="filter__3" class="checkbox" id="id-filter__3" value="option3">
-                <label for="id-filter__3">Filter Option 3</label>
-            </div>
-        </section>
-        -->
     </header>
 
     <div class="m-side-navigation__body">
@@ -167,7 +109,13 @@
             <table class="m-table">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>
+                            <div>
+                                <p>Name</p>
+                                <i class="fas fa-sort-alpha-down"></i>
+                                <i class="fas fa-sort-alpha-down-alt"></i>
+                            </div>
+                        </th>
                         <th>Email</th>
                         <th>Benachrichtigungen</th>
                         <th></th>
