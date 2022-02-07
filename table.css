@@ -25,7 +25,3 @@ td, th {
 .m-table tr {
     border-bottom: 1px solid #afafaf;
 }
-
-.m-table tbody tr:nth-child(even) {
-    background-color: #eaeaea;
-}
