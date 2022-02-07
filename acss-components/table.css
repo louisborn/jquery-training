@@ -1,0 +1,31 @@
+td, th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.m-table {
+    position: relative;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.m-table thead {
+    height: 3rem;
+    border-bottom: 2px solid #333333;
+    position: sticky;
+    /*required for stickiness*/
+    top: 0;
+    background-color: #fff;
+}
+
+.m-table tbody {
+    border-bottom: 2px solid #afafaf;
+}
+
+.m-table tr {
+    border-bottom: 1px solid #afafaf;
+}
+
+.m-table tr:nth-of-type(even) {
+    background-color: #f7f7f7;
+}
