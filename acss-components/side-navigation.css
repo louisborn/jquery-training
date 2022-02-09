@@ -20,13 +20,13 @@
 .m-side-navigation {
     height: 100vh;
     width: 3rem;
-    background-color:#0D0D0D;
+    background-color:#ED9A26;
 }
 
 .m-side-navigation.-open {
     height: 100vh;
     width: 20vw;
-    background-color: #0D0D0D;
+    background-color: #ED9A26;
 }
 
 .m-side-navigation.-close .m-side-navigation__header__trigger.-open {
@@ -57,11 +57,11 @@
 }
 
 .m-side-navigation.-close .m-side-navigation__header:hover {
-    background-color: #26a1ed;
+    background-color: #F2AB49;
 }
 
 .m-side-navigation.-open .m-side-navigation__header__trigger.-close:hover {
-    background-color: #26a1ed;
+    background-color: #F2AB49;
 }
 
 .m-side-navigation__header__label {
@@ -73,11 +73,11 @@
 
 /*********/
 .-selected {
-    background-color: #0b5b8e;
+    background-color: #cd7d0e;
 }
 
 .m-side-navigation__menuItem.-selected:hover {
-    background-color: #26a1ed;
+    background-color: #F2AB49;
 }
 
 /*********/
@@ -121,5 +121,5 @@ a {
 }
 
 .m-side-navigation__menuItem:hover {
-    background-color: #26a1ed;
+    background-color: #F2AB49;
 }
