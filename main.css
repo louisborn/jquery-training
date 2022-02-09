@@ -66,17 +66,34 @@ body {
     overflow: hidden;
 }
 
+.content-section__page_title {
+    grid-column: 1 / 10;
+}
+
+.content-section__page_title > h2 {
+    margin: 0;
+}
+
+.content-section__page_subtitle {
+    grid-column: 1 / 10;
+}
+
+.content-section__page_subtitle > p {
+    color: #afafaf;
+}
+
+
 .content-section__main {
     overflow-y: auto;
     grid-column: 1 / 13;
+    margin-top: 1rem;
 }
 
 .content-section__action {
-    grid-column: 11 / 13;
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
-    margin-top: 1rem;
+    grid-column: 11 / 13;
+    margin-bottom: 1rem;
 }
 
 .-grid__footer {

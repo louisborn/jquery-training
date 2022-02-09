@@ -5,10 +5,14 @@ $(document).ready(function () {
         {"name": "Michael Meier", "email": "michael.meier@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test"]},
         {"name": "Fritz Müller", "email": "fritz.mueller@gmail.com", "tag": ["Test", "Noch ein Test"]},
         {"name": "Marco Mendes", "email": "marco.mendez@gmail.com", "tag": ["Test", "Noch ein Test"]},
-        {"name": "Maria Navez", "email": "maria.navez@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test", "Sogar ganz viele Tests"]}
+        {"name": "Maria Navez", "email": "maria.navez@gmail.com", "tag": ["Test", "Noch ein Test", "Noch ein weiterer Test", "Sogar ganz viele Tests"]},
+        {"name": "Marco Mendes", "email": "marco.mendez@gmail.com", "tag": ["Test", "Noch ein Test"]},
+        {"name": "Marco Mendes", "email": "marco.mendez@gmail.com", "tag": ["Test", "Noch ein Test"]}
     ]`;
 
     var data = JSON.parse(sample_data);
+
+    countEntriesAndDisplay(data);
 
     sortSampleDataAlphabetically(data);
 
@@ -35,6 +39,7 @@ function loadSampleData(data, sortType) {
         var toAppend = '';
 
         obj.forEach(function (index) {
+            
             var tags_list = '';
 
             index.tag.forEach(function (i) {
@@ -50,12 +55,42 @@ function loadSampleData(data, sortType) {
                         ${tags_list}
                     </ul >
                 </td>
-                <td><i class="fas fa-pen a-button -withIcon"></td>
-                <td><i class="far fa-trash-alt a-button -withIcon"></i></td>
-            </tr >`;            
+            </tr >`;   
+        
         });
         return toAppend;
     }
+}
+
+function countEntriesAndDisplay(data) {
+    var number = data.length;
+    var toAppend = `
+        <p>Eingetragene Adressen: ` + number + `</p>
+    `;
+    $('section.content-section__page_subtitle').append(toAppend);
+}
+
+function displayUpdateSection(index, obj) {
+    $('section.content-section__update').children().remove();
+    $('table.m-table tr[class="-selected-table"]').removeClass();
+    var toAppend = '';
+
+    toAppend = `
+        <div class="update-area">
+            <h1>${index}</h1>
+            <div class="action-area">
+            <button class="a-button -secondary">
+                <div class="a-button__label">Update</div>
+            </button>
+            <button class="a-button -tertiary">
+                <div class="a-button__label">Löschen</div>
+            </button>
+            </div>
+        </div>
+    `;
+
+    $('table.m-table td:contains(' + index + ')').parent('tr').addClass('-selected-table');
+    $('section.content-section__update').append(toAppend);
 }
 
 function sortSampleDataAlphabetically(data) {

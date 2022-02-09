@@ -3,6 +3,11 @@ td, th {
     text-align: left;
 }
 
+th {
+    color: #777777;
+    background-color: #f9f9f9;
+}
+
 .m-table {
     position: relative;
     border-collapse: collapse;
@@ -11,7 +16,7 @@ td, th {
 
 .m-table thead {
     height: 3rem;
-    border-bottom: 2px solid #333333;
+    border-bottom: 2px solid #d6d6d6;
     position: sticky;
     /*required for stickiness*/
     top: 0;
@@ -19,16 +24,23 @@ td, th {
 }
 
 .m-table tbody {
-    border-bottom: 2px solid #afafaf;
+    border-bottom: 2px solid #d6d6d6;
 }
 
 .m-table tr {
-    border-bottom: 1px solid #afafaf;
+    border-bottom: 1px solid #d6d6d6;
 }
 
-.m-table tr:nth-of-type(even) {
-    background-color: #f7f7f7;
+.m-table tbody tr:hover {
+    cursor: pointer;
+    background-color: rgba(38, 161, 237, 0.1);
 }
+
+.-selected-table {
+    background-color: rgba(38, 161, 237, 0.5);
+}
+
+
 
 .m-table thead tr > th:nth-child(1):hover {
     color: #26a1ed;
