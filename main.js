@@ -65,7 +65,7 @@ function loadSampleData(data, sortType) {
 function countEntriesAndDisplay(data) {
     var number = data.length;
     var toAppend = `
-        <p>Eingetragene Adressen: ` + number + `</p>
+        <p>` + number + ` eingetragene E-Mail-Adressen</p>
     `;
     $('section.content-section__page_subtitle').append(toAppend);
 }

@@ -79,6 +79,7 @@ body {
 }
 
 .content-section__page_subtitle > p {
+    font-size: 0.75rem;
     color: #afafaf;
 }
 
