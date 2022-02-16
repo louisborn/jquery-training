@@ -60,12 +60,12 @@
 }
 
 .a-button.-tertiary:hover {
-    background-color: var(--primary-button-color__hover);
+    color: var(--primary-button-color__hover);
 }
 
 .a-button.-tertiary:active {
-    background-color: var(--primary-button-color__active);
-    color: white;
+    color: var(--primary-button-color__active);
+    
 }
 
 .a-button.-withIcon {
