@@ -1,9 +1,4 @@
-/* Buttons */
-:root {
-    --primary-button-color: #44adf0;
-    --primary-button-color__hover: #26a1ed;
-    --primary-button-color__active: #0b5b8e;
-}
+@import "../main.css";
 
 
 /* Button--Primary */
@@ -22,7 +17,7 @@
 }
 
 .a-button.-primary {
-    background-color: var(--primary-button-color);
+    background-color: var(--green-90);
     color: white;
 }
 
